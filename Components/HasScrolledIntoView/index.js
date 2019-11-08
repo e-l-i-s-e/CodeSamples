@@ -3,10 +3,9 @@ import { isBrowser } from 'acq-utils/lib/utils';
 import React, { useState, useRef, useEffect } from 'react';
 
 /**
- * `scrolledIntoView` is a Higher-Order Component that determines if the component passed to it has scrolled into the viewport.
+ * `scrolledIntoView` is a Higher-Order Component that determines if the component passed to it ever scrolls into the viewport.
  *
  * The status of `isVisible` will only toggle once and then the event listener will be removed from the window.
- * 'Scroll Reach' actions should fire only once in CXO tests so there is no need to continue to listen for scroll events after the component has scrolled into the viewport.
  *
  * Accessing `isVisible` status:
  *  From the parent (optional): pass a `toggleVisibility` function via props and it will be invoked when the wrapped component scrolls into view
